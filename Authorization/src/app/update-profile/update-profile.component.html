@@ -1,0 +1,41 @@
+<body>
+  <div class="container" *ngIf="currentUser">
+    <div class="card p-4" id="card">
+       
+        <form #myForm="ngForm">
+          <h4>Edit Profile</h4><br>
+        <p>
+          <mat-form-field appearance="outline" class="w-100">
+            <mat-label>CustomerId</mat-label>
+            <input matInput placeholder="Placeholder"  name="profileId" id="profileId" [(ngModel)]="profileDetails.custId" />
+          </mat-form-field>
+        </p>
+        <p>
+          <mat-form-field appearance="outline" class="w-100">
+            <mat-label>Personal Information</mat-label>
+            <input matInput placeholder="Placeholder"  id="personalInfo" name="personalInfo" [(ngModel)]="profileDetails.personalInfo" />
+          </mat-form-field>
+        </p>
+        <p>
+          <mat-radio-group aria-label="Select an option" name="gender" [(ngModel)]="profileDetails.gender">
+            <mat-radio-button value="1">Male</mat-radio-button>
+            <mat-radio-button value="2">Female</mat-radio-button>
+          </mat-radio-group>
+        </p>
+        <p>
+          <mat-form-field appearance="outline" class="w-100">
+            <mat-label>Email</mat-label>
+            <input matInput placeholder="Placeholder"  id="email" name="email" [(ngModel)]="profileDetails.email"/>
+          </mat-form-field>
+        </p>
+        <p>
+          <mat-form-field appearance="outline" class="w-100">
+            <mat-label>Mobile Number</mat-label>
+            <input matInput placeholder="Placeholder"  id="mobile" name="mobile" [(ngModel)]="profileDetails.mobile"/>
+          </mat-form-field>
+        </p>
+        <button mat-raised-button color="primary" (click)="editprofile()">Save</button>
+      </form>
+      </div>
+    </div>
+  </body>

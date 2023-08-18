@@ -1,0 +1,70 @@
+<div class="container">
+    <div class="card p-2">
+          <form>
+          <p>
+            <mat-form-field appearance="outline" class="w-100">
+              <mat-label>ProductId</mat-label>
+              <input matInput placeholder="Placeholder"  [(ngModel)]="products.productId" name="productId" />
+            </mat-form-field>
+          </p>
+          <p>
+              <mat-form-field appearance="outline" class="w-100">
+                <mat-label>ProductName</mat-label>
+                <input matInput placeholder="Placeholder" [(ngModel)]="products.productName" name="productName" />
+              </mat-form-field>
+            </p>
+            <p>
+              <mat-form-field appearance="outline" class="w-100">
+                <mat-label>ProductType</mat-label>
+                <input matInput placeholder="Placeholder" [(ngModel)]="products.productType" name="productType" />
+              </mat-form-field>
+            </p>
+            <p>
+              <mat-form-field appearance="outline" class="w-100">
+                <mat-label>Category</mat-label>
+                <input matInput placeholder="Placeholder" [(ngModel)]="products.category" name="category"/>
+              </mat-form-field>
+            </p>
+            <p>
+              <mat-form-field appearance="outline" class="w-100">
+                <mat-label>Rating</mat-label>
+                <input matInput placeholder="Placeholder" [(ngModel)]="products.rating" name="rating" />
+              </mat-form-field>
+            </p>
+            <p>
+              <mat-form-field appearance="outline" class="w-100">
+                <mat-label>Review</mat-label>
+                <input matInput placeholder="Placeholder" [(ngModel)]="products.review" name="review" />
+              </mat-form-field>
+            </p>
+            <p>
+              <mat-form-field appearance="outline" class="w-100">
+                <mat-label>Price</mat-label>
+                <input matInput placeholder="Placeholder" [(ngModel)]="products.price" name="price" />
+              </mat-form-field>
+            </p>
+            <p>
+              <mat-form-field appearance="outline" class="w-100">
+                <mat-label>Discount</mat-label>
+                <input matInput placeholder="Placeholder" [(ngModel)]="products.discount" name="discount" />
+              </mat-form-field>
+            </p>
+            <p>
+              <mat-form-field appearance="outline" class="w-100">
+                <mat-label>Images</mat-label>
+                <input matInput placeholder="Placeholder" [(ngModel)]="products.images" name="images" />
+              </mat-form-field>
+            </p>
+            <p>
+              <mat-form-field appearance="outline" class="w-100">
+                <mat-label>Description</mat-label>
+                <input matInput placeholder="Placeholder" [(ngModel)]="products.description" name="description"/>
+              </mat-form-field>
+            </p>
+            <div align="end">
+            <button mat-flat-button color="primary" class="w-20" style="margin-right: 5px;" (click)="onUpdateProduct()">Update</button>
+          </div>
+      </form>
+      </div>
+  </div>
+  

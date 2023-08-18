@@ -1,0 +1,60 @@
+<head>
+  <!-- Other meta tags and stylesheets -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+
+<div class="container bgimage">
+  <div class="row">
+    <div class="col-12">
+      <h2 class="text-center" style="font-weight: bold; text-shadow: 1px 1px 3px rgba(0, 0 0, 0.2); 
+        background-color: #007BFF; color: #FFFFFF; padding: 10px; border-radius: 10px;">
+        Available Products
+      </h2>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-lg-3 col-md-4 col-sm-6" *ngFor="let product of products">
+      <div class="card professional-card" (click)="showAddToCart(product)">
+        <div class="circle-image">
+          <img src="../../assets/plus.jpg" alt="Product Image" class="product-circle-image">
+        </div>
+        <div class="space"></div>
+        <div class="card-body">
+          <div class="text-center">
+            <img src="../../assets/add-cart-sign-front-side-with-white-background_187299-39632.jpg" alt="Product Image" class="product-image">
+          </div>
+          <div class="row">
+            <div class="col-12">
+              <h5 class="card-title professional-card-title"><i class="fas fa-box"></i>{{ product.prodName }}</h5>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-12">
+              <p class="card-text professional-card-text"><i class="fas fa-barcode"></i>ID: <span class="text-muted">{{ product.prodId }}</span></p>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-12">
+              <p class="card-text professional-card-text"><i class="fas fa-dollar-sign"></i>Price: <span class="text-muted">{{ product.prodPrice }}</span></p>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-12">
+              <p class="card-text professional-card-text"><i class="fas fa-industry"></i>Manufacturer: <span class="text-muted">{{ product.prodManufacturer }}</span></p>
+            </div>
+          </div>
+          <!-- Add other properties as per your requirements -->
+        </div>
+        <div class="space"></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-12 text-center">
+      <!--<input type="text" [(ngModel)]="manufacturerName" placeholder="Enter manufacturer name">-->
+      <button class="btn btn-primary professional-button" (click)="redirectToProductsByManufacturer()">View Products by Manufacturer</button>
+    </div>
+  </div>
+</div>

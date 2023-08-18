@@ -1,0 +1,23 @@
+<div class="container">
+<mat-grid-list cols="4" rowHeight="3:5" gutterSize="10">
+    <mat-grid-tile *ngFor="let product of filteredType |filter :searchKey:'productName'" >
+        <div class="row home-page-image p-5">
+            <img [src]="product.images">
+            <div class="texts">
+            <div class="product-name">
+                <p class="text-primary">{{product.productName}}</p>
+            </div>
+            <div class="product-rating">
+                <span>{{product.rating}}</span>&nbsp;&nbsp;
+            </div>
+            <div class="product-discount">
+                <b id="original-price">Rs:{{product.price}}</b>
+            </div>
+            <div>
+                <button mat-raised-button color="warn" (click)="addProductWithCondition(product.productId)" *ngIf="user">Add to Cart</button>
+            </div>
+        </div>
+        </div>
+    </mat-grid-tile>
+  </mat-grid-list>
+</div>

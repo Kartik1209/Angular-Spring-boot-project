@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Delete Page</title>
+  <link rel="stylesheet" type="text/css" href="delete-service.component.css">
+</head>
+<body>
+  <div class="container">
+    <h2>Delete Item</h2>
+    <form>
+      <input type="text" placeholder="Enter ID" name="id" required id="idid" [(ngModel)]="Id" [ngModelOptions]="{standalone: true}">
+      <input type="submit" value="Delete" (click)="deleteProduct()">
+    </form>
+  </div>
+</body>
+</html>

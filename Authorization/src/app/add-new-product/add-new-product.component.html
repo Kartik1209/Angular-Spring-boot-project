@@ -1,0 +1,175 @@
+<div class="container">
+  <div class="card p-2">
+    <form #myForm="ngForm">
+      <p>
+        <mat-form-field appearance="outline" class="w-100">
+          <mat-label>ProductName</mat-label>
+          <input
+            matInput
+            placeholder="Placeholder"
+            [(ngModel)]="products.productName"
+            name="productName"
+            required
+            minlength="1"
+            maxlength="20"
+            #productName="ngModel"
+            [ngClass]="{'is-invalid':productName.touched && productName.errors}"
+          />
+          <div *ngIf="productName.touched && productName.errors">
+            <small *ngIf="productName.errors['required']">*ProductName is required</small>
+          </div>
+        </mat-form-field>
+      </p>
+      <p>
+        <mat-form-field appearance="outline" class="w-100">
+          <mat-label>ProductType</mat-label>
+          <input
+            matInput
+            placeholder="Placeholder"
+            [(ngModel)]="products.productType"
+            name="productType"
+            required
+            minlength="1"
+            maxlength="20"
+            pattern="[a-zA-Z][a-zA-Z ]+"
+            #productType="ngModel"
+            [ngClass]="{'is-invalid':productType.touched && productType.errors}"
+          />
+          <div *ngIf="productType.touched && productType.errors">
+            <small *ngIf="productType.errors['required']">*ProductType is required</small>
+            <small *ngIf="productType.errors['pattern']">*ProductType must be in characters</small>
+          </div>
+        </mat-form-field>
+      </p>
+      <p>
+        <mat-form-field appearance="outline" class="w-100">
+          <mat-label>Category</mat-label>
+          <input
+            matInput
+            placeholder="Placeholder"
+            [(ngModel)]="products.category"
+            name="category"
+            required
+            minlength="1"
+            maxlength="20"
+            pattern="[a-zA-Z][a-zA-Z ]+"
+            #category="ngModel"
+            [ngClass]="{'is-invalid':category.touched && category.errors}"
+          />
+          <div *ngIf="category.touched && category.errors">
+            <small *ngIf="category.errors['required']">*Category is required</small>
+            <small *ngIf="category.errors['pattern']">*Category must be in characters</small>
+          </div>
+        </mat-form-field>
+      </p>
+      <p>
+        <mat-form-field appearance="outline" class="w-100">
+          <mat-label>Rating</mat-label>
+          <input
+            matInput
+            type="number"
+            placeholder="Placeholder"
+            [(ngModel)]="products.rating"
+            name="rating"
+            required
+            min="0"
+            maxlength="5"
+            #rating="ngModel"
+            [ngClass]="{'is-invalid':rating.touched && rating.errors}"
+          />
+          <div *ngIf="rating.touched && rating.errors">
+            <small *ngIf="rating.errors['required']">*Rating is required</small>
+            <small *ngIf="rating.errors['min']">*Rating must be zero or greater than zero</small>
+          </div>
+        </mat-form-field>
+      </p>
+      <p>
+        <mat-form-field appearance="outline" class="w-100">
+          <mat-label>Review</mat-label>
+          <input
+            matInput
+            placeholder="Placeholder"
+            [(ngModel)]="products.review"
+            name="review"
+            required
+            minlength="0"
+            maxlength="50"
+            pattern="^[a-zA-Z][a-zA-Z0-9.,$;]+$?"
+            #review="ngModel"
+            [ngClass]="{'is-invalid':review.touched && review.errors}"
+          />
+          <div *ngIf="review.touched && review.errors">
+            <small *ngIf="review.errors['required']">*Review is required</small>
+            <small *ngIf="review.errors['pattern']">*Starting value must be a character</small>
+          </div>
+        </mat-form-field>
+      </p>
+      <p>
+        <mat-form-field appearance="outline" class="w-100">
+          <mat-label>Price</mat-label>
+          <input
+            matInput
+            type="number"
+            placeholder="Placeholder"
+            [(ngModel)]="products.price"
+            name="price"
+            required
+            min="1"
+            max="10000000"
+            #price="ngModel"
+            [ngClass]="{'is-invalid':price.touched && price.errors}"
+          />
+          <div *ngIf="price.touched && price.errors">
+            <small *ngIf="price.errors['required']">*Price is required</small>
+            <small *ngIf="price.errors['min']">*Price must be zero or greater than zero</small>
+          </div>
+        </mat-form-field>
+      </p>
+      <p>
+        <mat-form-field appearance="outline" class="w-100">
+          <mat-label>Images</mat-label>
+          <input
+            matInput
+            placeholder="Placeholder"
+            [(ngModel)]="products.images"
+            name="images"
+            required
+          />
+        </mat-form-field>
+      </p>
+      <p>
+        <mat-form-field appearance="outline" class="w-100">
+          <mat-label>Description</mat-label>
+          <input
+            matInput
+            placeholder="Placeholder"
+            [(ngModel)]="products.description"
+            name="description"
+            required
+            minlength="10"
+            maxlength="60"
+            pattern="[a-zA-Z][a-zA-Z ]+"
+            #description="ngModel"
+            [ngClass]="{'is-invalid':description.touched && description.errors}"
+          />
+          <div *ngIf="description.touched && description.errors">
+            <small *ngIf="description.errors['required']">*Description is required</small>
+            <small *ngIf="description.errors['pattern']">*Description must be in characters</small>
+          </div>
+        </mat-form-field>
+      </p>
+      <div align="end">
+        <button
+          mat-flat-button
+          color="primary"
+          class="w-20"
+          style="margin-right: 5px"
+          (click)="addProduct()"
+        >
+          Add
+        </button>
+        <button mat-flat-button color="primary" class="w-20" (click)="reset(myForm)">Clear</button>
+      </div>
+    </form>
+  </div>
+</div>

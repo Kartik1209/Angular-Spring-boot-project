@@ -1,0 +1,188 @@
+<!-- <ng-container *ngIf="cartData.items?.length > 0">
+  <div class="container">
+    <div class="card-table">
+      <div class="card-product">
+        <table class="table table-responsive">
+          <thead>
+            <tr>
+              <th>ProductId</th>
+              <th>Image</th>
+              <th>ProductName</th>
+              <th>Quantity</th>
+              <th>Price</th>
+              <th>Action</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let product of cartData.items">
+              <td>{{ product.productId }}</td>
+              <td>
+                <img src="{{ product.images }}" />
+              </td>
+              <td class="style">{{ product.productName }}</td>
+              <div>
+                <td class="style">
+                  <div>
+                    <button
+                      class="decrease"
+                      (click)="onClickIncreaseQuant(product.productId)"
+                    >
+                      +</button
+                    >&nbsp;
+                    <input
+                      id="quantity"
+                      type="text"
+                      value="{{ product.quantity }}"
+                    />
+                    &nbsp;
+                    <button
+                      class="decrease"
+                      (click)="onClickDecreaseButton(product.productId)"
+                    >
+                      -
+                    </button>
+                  </div>
+                </td>
+              </div>
+              <td class="style">{{ product.price }}</td>
+              <td class="style">
+                <button
+                  mat-icon-button
+                  color="warn"
+                  (click)="onClickDelete(product.productId)"
+                >
+                  <mat-icon>delete</mat-icon>
+                </button>
+              </td>
+            </tr>
+            <tr>
+              <td></td>
+              <td>
+                <button
+                  id="emptyCart"
+                  mat-raised-button
+                  color="warn"
+                  (click)="onClickEmptyCart()"
+                >
+                  Empty Cart</button
+                >&nbsp;
+              </td>
+              <td>
+                <button
+                  id="emptyCart"
+                  mat-raised-button
+                  color="primary"
+                  (click)="goToHome()"
+                >
+                  Shop More</button
+                >&nbsp;
+              </td>
+              <td>
+                <button class="btn btn-success">
+                  Total:Rs.{{ cartData.totalPrice }}
+                </button>
+              </td>
+              <td>
+                <button
+                  id="emptyCart"
+                  mat-raised-button
+                  color="accent"
+                  (click)="navigateToAddress()"
+                >
+                  CheckOut
+                </button>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</ng-container>
+
+<ng-container *ngIf="cartData.items?.length <= 0">
+  <div class="container">
+    <div class="card">
+      <h5 class="card-title">My Cart</h5>
+    </div>
+    <div class="center">
+      <img
+        src="https://rukminim1.flixcart.com/www/800/800/promos/16/05/2019/d438a32e-765a-4d8b-b4a6-520b560971e8.png?q=90"
+        alt=""
+      />
+      <h4>Your cart is empty</h4>
+      <h6>Add Item to it now</h6>
+      <button mat-raised-button color="primary" (click)="onclickShopNow()">
+        Shop Now
+      </button>
+    </div>
+  </div>
+</ng-container> -->
+
+<!-- add-to-cart.component.html -->
+<head>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-/Ivn+HJSR5zheFmmlVJ2xIZKJw8iX0Ps3UJn7z3aC9DJY9Jr98JnuVjqdpkTBaJqE0aYb6d9v5WbYqxYPJg3A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-/Ivn+HJSR5zheFmmlVJ2xIZKJw8iX0Ps3UJn7z3aC9DJY9Jr98JnuVjqdpkTBaJqE0aYb6d9v5WbYqxYPJg3A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+</head>
+
+
+<div class="row">
+  <div class="col-lg-4" *ngFor="let product of getSelectedProducts(); trackBy: trackByIndex">
+    <div class="product-card">
+      <!-- <h3>Product {{ getProductIndex(product) }}</h3> -->
+      <div class="card-body">
+        <div class="row">
+          <div class="col-12">
+            <h5 class="card-title professional-card-title"><i class="fas fa-box"></i>{{ product.prodName }}</h5>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-12">
+            <p class="card-text professional-card-text fw-bold" ><i class="fas fa-barcode"></i>ID: <span class="text-muted">{{ product.prodId }}</span></p>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-12">
+            <p class="card-text professional-card-text fw-bold"><i class="fas fa-dollar-sign"></i>Price: <span class="text-muted">{{ product.prodPrice }}</span></p>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-12">
+            <p class="card-text professional-card-text fw-bold"><i class="fas fa-industry"></i>Manufacturer: <span class="text-muted">{{ product.prodManufacturer }}</span></p>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-12">
+            <button class="delete-btn" (click)="removeProduct(product)">
+              Remove
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<ng-container *ngIf="getSelectedProducts().length === 0">
+  <div class="empty-products">
+    <p>EMPTY CART!!.</p>
+    <img src="../../assets/empty-cart-concept-illustration_114360-17701.jpg" alt="Empty Cart Image">
+  </div>
+</ng-container>
+
+
+<button class="back-btn" (click)="goBack()">Back</button>
+
+
+
+<div class="CheckOut">
+  <input type="text" placeholder="Enter a discount code" class="discount-input" [value]="totalPrice">
+  <a href="http://localhost:8083" class="discount-btn">
+    <button mat-raised-button color="primary">
+      CheckOut
+    </button>
+  </a>
+</div>
+
+

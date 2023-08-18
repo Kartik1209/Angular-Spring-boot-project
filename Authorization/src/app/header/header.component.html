@@ -1,0 +1,104 @@
+<p>
+  <mat-toolbar class="BGBlue">
+    <a
+      role="button"
+      style="text-decoration: none"
+      (click)="onClickElectronicShopping()"
+    >
+      <span style="color: white">
+        <img
+          src="../../assets/agrodealer-logo.png"
+          height="70px"
+          width="50px"
+        />
+        <strong class="m-5">AgroDealer </strong></span
+      >
+    </a>
+    &nbsp;<button mat-raised-button color="primary" *ngIf="!isLoggedIn">
+      <div class="navbar-collapse">
+        <ul class="navbar-nav me-auto">
+          <li class="nav-item dropdown">
+            <a
+              class="nav-link dropdown-toggle"
+              href="#"
+              role="button"
+              data-bs-toggle="dropdown"
+              style="color: white"
+            >
+              User
+            </a>
+            <ul class="dropdown-menu dropdown-menu-light">
+              <li>
+                <a class="dropdown-item" href="#" routerLink="/signup"
+                  >SignUp</a
+                >
+              </li>
+              <li>
+                <a class="dropdown-item" href="#" routerLink="/login">SignIn</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </button>
+  </mat-toolbar>
+  <mat-toolbar *ngIf="!isLoggedIn">
+    <button mat-raised-button routerLink="/front-page">Home</button>
+  </mat-toolbar>
+  <mat-toolbar *ngIf="isLoggedIn">
+    <a mat-raised-button routerLink="front-page">
+      <mat-icon>home</mat-icon>
+    </a>
+    <button mat-raised-button *ngIf="showAddProducts" routerLink="/deleteProducts">
+      Remove
+    </button>
+    <button mat-raised-button *ngIf="showProducts" routerLink="/addProduct">
+      Add
+    </button>
+
+    &nbsp;<button mat-raised-button>
+      <div class="navbar-collapse">
+        <ul class="navbar-nav me-auto">
+          <li class="nav-item dropdown">
+            <a
+              class="nav-link dropdown-toggle"
+              href="#"
+              role="button"
+              data-bs-toggle="dropdown"
+              id="color"
+            >
+              Account
+            </a>
+            <ul class="dropdown-menu dropdown-menu-light">
+              <li>
+                <a class="dropdown-item" href="#" routerLink="/profile"
+                  >Profile</a
+                >
+              </li>
+              <li>
+                <a class="dropdown-item" href="#" (click)="onLogout()"
+                  >Logout</a
+                >
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </button>
+
+    &nbsp;<button mat-raised-button (click)="getAll()">Products</button>
+    &nbsp;<a mat-raised-button *ngIf="showCart" (click)="onClickCart()">
+      <mat-icon style="font-size: 20px">add_shopping_cart</mat-icon></a
+    >&nbsp;
+    <div>
+      <input
+        class="styleSearch"
+        type="text"
+        placeholder="search products"
+        [(ngModel)]="searchTerm"
+        (keyup)="search($event)"
+      />
+    </div>
+    <mat-icon class="search-icon">search</mat-icon>
+  </mat-toolbar>
+</p>

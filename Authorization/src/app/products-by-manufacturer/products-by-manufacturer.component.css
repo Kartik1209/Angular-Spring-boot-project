@@ -1,0 +1,79 @@
+.professional-heading {
+    font-family: Arial, sans-serif;
+    font-size: 24px;
+    font-weight: bold;
+    color: #333333;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+  }
+  
+
+/* Hover effect for the card */
+.professional-card:hover {
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  transform: scale(1.05);
+}
+
+
+/* Style for the card text (ID, Price, Manufacturer) */
+.professional-card-text span {
+  color: #999;
+}
+
+/* Space between elements */
+.space {
+  height: 16px;
+}
+
+.card-icon {
+  margin-right: 8px; /* Add space between icons and text */
+}
+
+.professional-card {
+  width: 100%; /* Full width */
+  max-width: 300px; /* Maximum width for each card */
+  margin: 10px auto; /* Center the card */
+  padding: 10px;
+  /* margin-bottom: 20px; */
+  
+}
+
+.product-image {
+  max-width: 100%;
+  height: auto;
+  margin-bottom: 10px;
+}
+
+.professional-card-title {
+  font-size: 18px;
+}
+
+.professional-card-text {
+  font-size: 14px;
+  margin-bottom: 5px;
+}
+
+.circle-image {
+  position: absolute;
+  top: 10px; /* Adjust as needed */
+  right: 10px; /* Adjust as needed */
+  width: 40px; /* Set the width and height to make it circular */
+  height: 40px;
+  border-radius: 50%; /* Make it circular */
+  overflow: hidden; /* Ensure the image stays within the circle */
+  background-color: #007BFF; /* Background color for the circle */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.plus-symbol {
+  width: 20px; /* Adjust the size of the plus symbol */
+  height: auto;
+}
+
+.product-circle-image{
+  height: 60px;
+}
+  
+  

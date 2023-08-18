@@ -1,0 +1,91 @@
+<body>
+  <div class="container" *ngIf="currentUser">
+    <div class="card p-4" id="card">
+      <div class="row">
+        <div class="col-6">
+          <img
+            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT3EKZsnx8N9RQr0a3ao8Z1AmkV51Fi3Asi3g&usqp=CAU"
+          /><br />
+          <div class="userwelcome">
+            <br />
+            <p>
+              <b>Welcome {{ profileDetails.profileId }}!</b>
+            </p>
+            <p><b>You are now viewing your profile</b></p>
+          </div>
+        </div>
+        <div class="col-6">
+          <form #myForm="ngForm">
+            <p>
+              <mat-form-field appearance="outline" class="w-100">
+                <mat-label>CustomerId</mat-label>
+                <input
+                  matInput
+                  placeholder="Placeholder"
+                  name="profileId"
+                  id="profileId"
+                  value="{{ username }}"
+                  [(ngModel)]="profileDetails.profileId"
+                />
+              </mat-form-field>
+            </p>
+            <p>
+              <mat-form-field appearance="outline" class="w-100">
+                <mat-label>Personal Information</mat-label>
+                <input
+                  matInput
+                  placeholder="Placeholder"
+                  id="personalInfo"
+                  name="personalInfo"
+                  [(ngModel)]="profileDetails.personalInfo"
+                />
+              </mat-form-field>
+            </p>
+            <p>
+              <mat-radio-group
+                aria-label="Select an option"
+                name="gender"
+                [(ngModel)]="profileDetails.gender"
+              >
+                <mat-radio-button value="1">Male</mat-radio-button>
+                <mat-radio-button value="2">Female</mat-radio-button>
+              </mat-radio-group>
+            </p>
+            <p>
+              <mat-form-field appearance="outline" class="w-100">
+                <mat-label>Email</mat-label>
+                <input
+                  matInput
+                  placeholder="Placeholder"
+                  id="email"
+                  name="email"
+                  value="{{ email }}"
+                  [(ngModel)]="profileDetails.email"
+                />
+              </mat-form-field>
+            </p>
+            <p>
+              <mat-form-field appearance="outline" class="w-100">
+                <mat-label>Mobile Number</mat-label>
+                <input
+                  matInput
+                  placeholder="Placeholder"
+                  id="mobile"
+                  name="mobile"
+                  [(ngModel)]="profileDetails.mobileNo"
+                />
+              </mat-form-field>
+            </p>
+            <button mat-raised-button color="accent" (click)="addNewProfile()">
+              Add Profile
+            </button>
+            &nbsp;
+            <button mat-raised-button color="primary" (click)="onClickEdit()">
+              Edit Profile
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>

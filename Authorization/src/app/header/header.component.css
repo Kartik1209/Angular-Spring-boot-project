@@ -1,0 +1,33 @@
+span{
+    margin-right: 900px;
+}
+#logout
+{
+    margin-left: 200px;
+}
+.styleSearch{
+    width: 600px;
+    border-radius: 3px;
+    padding: 6px;
+    padding-right: 90px;
+    border: none;
+    height: 40px;
+}
+.search-icon{
+    position: absolute;
+    z-index: 10;
+    right: 30%;
+    color: hwb(128 0% 0%);
+}
+
+#color{
+    color: black;
+}
+
+.mat-raised-button {
+    font-size: small;
+}
+
+.BGBlue {
+    background-color: #FFD700;
+}

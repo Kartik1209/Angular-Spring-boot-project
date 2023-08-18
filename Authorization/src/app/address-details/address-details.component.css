@@ -1,0 +1,28 @@
+tbody img{
+    object-fit:contain;
+    width:200px;
+    height:300px;
+}
+.align-center{
+    text-align: center;
+}
+input.ng-invalid.ng-touched{
+    border: 1px solid red ;
+}
+small{
+    color: red;
+}
+.orderdetails{
+    text-align: center;
+    color: #58D68D;
+}
+
+#table{
+  width: 350px;
+  margin-left: 160px;
+}
+
+#card1{
+    margin-left: 250px;
+    margin-right: 200px;
+}

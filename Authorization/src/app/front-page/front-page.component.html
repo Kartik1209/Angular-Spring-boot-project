@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AgroDealer</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+      background-color: hsla(0, 0%, 94%, 0.144);
+    }
+    .header {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+}
+
+.header img {
+  width: 100%;
+  max-height: 300px;
+  height: auto;
+  padding: 20px;
+}
+
+    .container {
+      padding: 20px;
+      max-width: 100%;
+      margin: 0 auto;
+      overflow: hidden;
+    }
+    .item {
+      display: flex;
+      animation: slideImages 20s infinite linear;
+    }
+    .item img {
+      width: 25%;
+      height: 400px;
+      object-fit: cover;
+      margin: 0 10px;
+      border-radius: 10px; /* Adjust border radius to create rounded corners */
+    }
+    @keyframes slideImages {
+      0% {
+        transform: translateX(0);
+      }
+      100% {
+        transform: translateX(-100%);
+      }
+    }
+    .about {
+      margin-top: 30px;
+    }
+    .footer {
+      background-color: rgba(0, 0, 0, 0.2);
+      padding: 20px;
+      text-align: center;
+    }
+    .textbox {
+  position: absolute;
+  top: 55.47%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: transparent;
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+}
+
+.textbox h1 {
+  font-size: 36px;
+  font-weight: bold;
+  color: #333;
+  text-align: center;
+  margin: 0;
+}
+
+  </style>
+</head>
+<body>
+  <div class="header">
+    <img src="./assets/MAIN.jpg" alt="Farm 1">
+  </div>
+  <div class="textbox">
+    <h1>AGRO-DEALER</h1>
+  </div>
+  <div class="container mt-4">
+    <div class="item">
+      <img src="./assets/farm2.jpg" alt="Image 1">
+      <img src="./assets/farm3.jpg" alt="Image 2">
+      <img src="./assets/farm4.jpg" alt="Image 3">
+      <img src="./assets/farm2.jpg" alt="Image 4">
+      <img src="./assets/farm3.jpg" alt="Image 5">
+      <img src="./assets/farm4.jpg" alt="Image 6">
+      <img src="./assets/farm2.jpg" alt="Image 7">
+      <img src="./assets/farm3.jpg" alt="Image 8">
+    </div>
+  </div>
+  <div class="container about">
+    <div class="row">
+      <div class="col-lg-6 col-md-12 mb-4 mb-md-0">
+        <h5 class="text-uppercase">ABOUT US</h5>
+        <p>
+          At AgroDealer, we are driven by our passion for supporting the agricultural community and fostering growth in the farming industry. Our mission is to empower farmers and connect them with dealers, creating a seamless marketplace where quality agricultural products thrive.
+        </p>
+      </div>
+      <div class="col-lg-6 col-md-12 mb-4 mb-md-0">
+        <h5 class="text-uppercase">Mail us</h5>
+        <p>AgroDealer <br>
+          20 B 
+          AgroDealers Pvt Ltd,
+          FarmHouse Villa behind RingRoad,
+          Jalgaon, 425001,<br>
+          Maharashtra, India</p>
+        <h5>Contact us</h5>
+        <p><mat-icon> call</mat-icon>+91 9503933349</p>
+        <p><mat-icon> email</mat-icon>AgroDealer1209@gmail.com</p>
+      </div>
+    </div>
+  </div>
+  <footer class="footer">
+    © 2023 Copyright:
+    <span class="text-dark">AgroDealer</span>
+  </footer>
+</body>
+</html>

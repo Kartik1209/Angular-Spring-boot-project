@@ -1,0 +1,206 @@
+.card{
+    height: 60vh;
+    margin: 25px;
+    padding: 25px;
+}
+
+.center{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    text-align: center;
+}
+.center img{
+    text-decoration: none;
+    color: inherit;
+    border: none;
+    outline: none;
+    height: 162px;
+    width: 250px;
+    margin: 20px 0px;
+}
+
+h4,h6{
+    font-weight: 400;
+}
+button{
+    margin-top: 20px;
+}
+
+.card-table{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    min-width: none;
+    word-wrap: break-word;
+    background-color: #fff;
+    background-clip: border-box;
+    border: 1px solid rgba(0, 0, 0, .2);
+    border-radius: .25rem;
+}
+
+.btn{
+    font-size: 14px !important;
+    margin-top: 20px !important;
+    font-weight: 400;
+    padding: 12px 72px;
+    border-radius: 3px !important;
+}
+
+tbody img{
+        object-fit:contain;
+        width:200px;
+        height:300px;
+}
+
+tfoot button{
+    display: table-cell;
+    width : 200px
+}
+
+tbody .style{
+    width: 30%;
+}
+.style #quantity{
+    width: 40px;
+    height: 30px;
+    padding: 10px;
+}
+
+.style .decrease{
+    display: inline-block;
+    border: 1px solid #c2c2c2;
+    cursor: pointer;
+    font-size: 16px;
+    color: #fff;
+    background-color: crimson;
+    border-radius: 50%;
+    padding-top: 1px;
+    line-height: 1;
+    width: 28px;
+    height: 28px;
+}
+
+.CheckOut{
+    margin-left: 380px;
+}
+
+/* styles.css (or your component's CSS file) */
+.product-card {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 16px;
+    cursor: pointer;
+    transition: box-shadow 0.3s ease, transform 0.2s ease;
+    margin: 10px; /* Add horizontal and vertical space between cards */
+    background-color: hsl(202, 100%, 98%);
+  }
+  
+  .product-card h3 {
+    margin-top: 0;
+    margin-bottom: 8px;
+  }
+  
+  .product-card div {
+    margin-bottom: 4px;
+  }
+  
+  .product-card div:last-child {
+    margin-bottom: 0;
+  }
+  
+  .product-card i {
+    margin-right: 8px;
+  }
+  
+  delete-btn {
+    position: relative;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: red;
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-size: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .delete-btn:before {
+    content: "\f00d";
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+  }
+
+  .delete-btn:hover {
+    background-color: darkred;
+  }
+
+
+  .back-btn {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    padding: 10px 20px;
+    margin-top: 20px;
+    border-radius: 5px;
+    font-size: 16px;
+  }
+
+  .CheckOut {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-top: 20px;
+  }
+
+  .discount-input {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    flex: 1;
+  }
+
+  .discount-input::placeholder {
+    color: #999;
+  }
+
+  .discount-input:focus {
+    border-color: #007bff;
+  }
+
+  .discount-btn {
+    display: inline-block;
+    margin: 0;
+    padding: 10px 20px;
+    font-size: 14px;
+  }
+
+  .empty-products {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 20px;
+    background-color: #f4f4f4;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    margin: 20px auto;
+    height: 500px;
+    font-weight: bolder;
+  }
+  
+  .empty-products p {
+    font-size: 18px;
+    margin-bottom: 10px;
+  }
+  
+  .empty-products img {
+    max-width: 200px;
+    height: auto;
+  }
